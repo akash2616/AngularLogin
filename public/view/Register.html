@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+<section id="loginBox"  ng-controller="loginController">
+    <h2>Register</h2>
+    <form method="post" class="minimal"  ng-controller="loginController">
+
+        <label for="Firstname">
+            Firstname:
+            <input type="text" name="firstname" id="firstname"  ng-model="firstname"  required="required"  registerFormValidator/>
+        </label>
+
+        <label for="Lastname">
+            Lastname:
+            <input type="text" name="lastname" id="lastname"  ng-model="lastname"  required="required" />
+        </label>
+
+        <label for="Gender">
+            Gender:
+            <input type="text" name="city" id="gender"  ng-model="gender"  required="required" />
+        </label>
+
+        <label for="City">
+            City:
+            <input type="text" name="city" id="city"  ng-model="city"  required="required" />
+        </label>
+
+        <label for="userid">
+            UserId:
+            <input type="text" name="userid" id="userid"  ng-model="userid"  required="required" />
+        </label>
+
+        <label for="password">
+            Password:
+            <input type="password" name="password" id="password"  ng-model="password" required="required" />
+        </label>
+        <label  for="errorMsg" name="errorMsg" id="errorMsg"  ng-model="errorMsg" >
+        </label>
+        <button type="button" class="btn-minimal" ng-click="registerUser()" >Register</button>
+    </form>
+</section>
+</body>
+</html>
+
+
+<body>
+</body>

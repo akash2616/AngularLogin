@@ -1,0 +1,21 @@
+{
+  "name": "day1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2",
+    "gitCommit" : "git://github.com/akash2616/AngularLogin.git#commit-ish"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

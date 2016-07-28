@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<section id="loginBox"  ng-controller="loginController">
+    <h2>Login</h2>
+    <form method="post" class="minimal"  ng-controller="loginController">
+        <label for="username">
+            Username:
+            <input type="text" name="username" id="username"  ng-model="username"  required="required" />
+        </label>
+        <label for="password">
+            Password:
+            <input type="password" name="password" id="password"  ng-model="password" required="required" />
+        </label>
+        <button type="submit" class="btn-minimal" ng-click="login()" >Sign in</button>
+
+        <button type="button" class="btn-minimal" ng-click="createUser()" >New User</button>
+    </form>
+</section>
+</body>
+</html>
+
+
+<body>
+</body>

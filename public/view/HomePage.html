@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+
+    <link rel="stylesheet" type="text/css" href="css/homepage.css">
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage" data-twttr-rendered="true">
+<!--HEADER-->
+<header id="content-top" role="banner" itemscope="itemscope" itemtype="http://schema.org/Header">
+    <div class="wrapper">
+        <div id="header-logo">
+            <h1 itemprop="headline">
+
+            </h1>
+        </div>
+        <nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+            <ul>
+
+                <li><a href="/">Home</a></li>
+
+                <li><a href="/about-me/">About Me</a></li>
+
+                <li class="active"><a href="/blog/">Blog</a></li>
+
+                <li><a href="/resources/">Resources</a></li>
+
+                <li><a href="/contact/">Contact</a></li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+<!--CONTENT-->
+<div id="content-main">
+    <div class="wrapper">
+        <div id="body-content">
+            <header>
+
+
+            </header>
+            <div id="article-wrap">
+
+                <b>{{message}}  {{username}}, to the TUTORIAL</b><br>
+
+                <b>{{username}}, your user number is {{usernumber}}</b><br>
+
+                <b>{{username}}, your last login was on {{lastlogin}}</b><br>
+
+
+
+            </div>
+        </div>
+        <section id="main" ng-show="todos.length" ng-cloak>
+            <input id="toggle-all" type="checkbox" ng-model="allChecked" ng-click="markAll(allChecked)">
+            <label for="toggle-all">Mark all as complete</label>
+            <ul id="todo-list">
+                <li ng-repeat="todo in todos | filter:statusFilter track by $index" ng-class="{completed: todo.completed, editing: todo == editedTodo}">
+                    <div class="view">
+                        <input class="toggle" type="checkbox" ng-model="todo.completed" ng-change="toggleCompleted(todo)">
+                        <label ng-dblclick="editTodo(todo)">{{todo.title}}</label>
+                        <button class="destroy" ng-click="removeTodo(todo)"></button>
+                    </div>
+                    <form ng-submit="saveEdits(todo, 'submit')">
+                        <input class="edit" ng-trim="false" ng-model="todo.title" todo-escape="revertEdits(todo)" ng-blur="saveEdits(todo, 'blur')" todo-focus="todo == editedTodo">
+                    </form>
+                </li>
+            </ul>
+        </section>
+    </div>
+</div>
+<!--FOOTER-->
+<footer role="contentinfo">
+    <div class="wrapper">
+        <div>
+            <h3>Get Weekly Updates</h3>
+            <!-- Begin MailChimp Signup Form -->
+
+            <!--End mc_embed_signup-->
+        </div>
+        <div>
+
+        </div>
+        <div class="col-1-2">
+
+        </div>
+    </div>
+    <div class="footerSole" itemscope="itemscope">
+
+    </div>
+</footer>
+
+
+</body>
+</html>
